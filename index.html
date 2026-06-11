@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md. Rakibul Islam — Software QA Engineer</title>
+    <meta name="description"
+        content="Portfolio of Md. Rakibul Islam, a professional Software QA Engineer from Bangladesh with 3+ years of experience." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+
+<body>
+
+    <!-- ==================== NAV ==================== -->
+    <nav id="navbar">
+        <a href="#home" class="logo">R<span>.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="https://rakibsanto.netlify.app/img/cv/Resume_Md.%20Rakibul%20Islam_%20SQA.pdf" target="_blank"
+            class="nav-cta">Download CV</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile drawer overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="hero">
+        <canvas id="heroCanvas"></canvas>
+
+        <!-- Floating QA / Bug icons for visual depth -->
+        <div class="hero-float-icons" aria-hidden="true">
+            <span class="fi fi-1"><i class="fas fa-bug"></i></span>
+            <span class="fi fi-2"><i class="fas fa-circle-check"></i></span>
+            <span class="fi fi-3"><i class="fas fa-circle-xmark"></i></span>
+            <span class="fi fi-4"><i class="fas fa-magnifying-glass-chart"></i></span>
+            <span class="fi fi-5"><i class="fas fa-triangle-exclamation"></i></span>
+            <span class="fi fi-6"><i class="fas fa-code"></i></span>
+            <span class="fi fi-7"><i class="fas fa-shield-check"></i></span>
+            <span class="fi fi-8"><i class="fas fa-rotate"></i></span>
+            <span class="fi fi-9"><i class="fas fa-vial"></i></span>
+            <span class="fi fi-10"><i class="fas fa-terminal"></i></span>
+        </div>
+
+        <div class="hero-inner">
+            <!-- Left column: text -->
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Available for hire
+                </div>
+                <h1>Md. Rakibul<br /><span class="gradient-text">Islam</span></h1>
+                <div class="hero-role">
+                    <span class="role-prefix">I am a </span>
+                    <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-desc">Passionate about delivering flawless software experiences. 3.5+ years of precision
+                    testing across web, mobile &amp; APIs — catching bugs before users do.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Hire Me <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://calendly.com/rakibsanto1998/30min" target="_blank" class="btn-ghost">Book a
+                        Call</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.facebook.com/rakibsanto" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/md-rakibsanto/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/rakibsanto" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:rakibsanto.cse@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Right column: Profile photo + QA stats -->
+            <div class="hero-visual">
+
+                <!-- Profile photo with glowing ring -->
+                <div class="profile-ring-wrap">
+                    <div class="profile-ring">
+                        <img src="img/profile.png" alt="Md. Rakibul Islam - Software QA Engineer"
+                            class="profile-photo" />
+                    </div>
+                    <!-- Experience badge top-left -->
+                    <div class="profile-badge pb-exp glass">
+                        <i class="fas fa-shield-check"></i>
+                        <div>
+                            <div class="fc-num">3.5+ Yrs</div>
+                            <div class="fc-lbl">Experience</div>
+                        </div>
+                    </div>
+                    <!-- Bugs badge bottom-right -->
+                    <div class="profile-badge pb-bugs glass">
+                        <i class="fas fa-bug-slash"></i>
+                        <div>
+                            <div class="fc-num">SQA</div>
+                            <div class="fc-lbl">Engineer Level 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QA mini stats card below photo -->
+                <div class="qa-mini-card glass">
+                    <div class="qa-mini-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="qa-card-title">test_suite_report.json</span>
+                        <span class="qa-badge-live" style="margin-left:auto">LIVE</span>
+                    </div>
+                    <div class="qa-mini-stats">
+                        <div class="qm-stat pass"><i class="fas fa-circle-check"></i><span class="stat-num"
+                                data-target="142">0</span><span>Passed</span></div>
+                        <div class="qm-stat fail"><i class="fas fa-circle-xmark"></i><span class="stat-num"
+                                data-target="3">0</span><span>Failed</span></div>
+                        <div class="qm-stat skip"><i class="fas fa-circle-minus"></i><span class="stat-num"
+                                data-target="5">0</span><span>Skipped</span></div>
+                    </div>
+                    <div class="qa-progress-bar" style="margin-top:.6rem">
+                        <div class="qa-progress-fill" data-width="96"></div>
+                    </div>
+                    <div class="qa-progress-label"><span>96% Pass Rate</span></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about section-pad">
+        <div class="container">
+            <div class="section-label">About Me</div>
+            <div class="about-grid">
+                <div class="about-left">
+                    <h2 class="section-heading">Turning bugs into<br /><span class="gradient-text">quality
+                            software</span></h2>
+                    <p>With over 3.5+ years of hands-on experience, I specialize in ensuring digital products are not
+                        just
+                        functional — but flawless. I craft detailed test strategies, execute manual and automated tests,
+                        and safeguard user experience at every step.</p>
+                    <p>I don't just find bugs — I accelerate delivery, reduce risk, and elevate product confidence.
+                        Let's build software that works, every time, for everyone.</p>
+                    <a href="https://calendly.com/rakibsanto1998/30min" target="_blank" class="btn-primary">Book a Call
+                        <i class="fas fa-calendar-alt"></i></a>
+                </div>
+                <div class="about-right">
+                    <div class="skill-cards">
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-hand-pointer"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">Manual Testing</span><span
+                                        class="sk-pct">95%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd half"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-robot"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">Test Automation</span><span
+                                        class="sk-pct">80%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd"></span><span class="sd"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-plug"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">API Testing</span><span
+                                        class="sk-pct">88%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-gauge-high"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">Performance Testing</span><span
+                                        class="sk-pct">75%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd"></span><span class="sd"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-user-shield"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">Security Testing</span><span
+                                        class="sk-pct">70%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd"></span><span class="sd"></span><span
+                                        class="sd"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="sk-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                            <div class="sk-info">
+                                <div class="sk-top"><span class="sk-name">Mobile Testing</span><span
+                                        class="sk-pct">85%</span></div>
+                                <div class="sk-dots">
+                                    <span class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd active"></span><span
+                                        class="sd active"></span><span class="sd"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services section-pad alt-bg">
+        <div class="container">
+            <div class="section-label">What I Do</div>
+            <h2 class="section-heading centered">Services I <span class="gradient-text">Offer</span></h2>
+            <p class="section-sub centered">Comprehensive QA solutions tailored to your project needs</p>
+            <div class="services-grid">
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Software Testing</h3>
+                    <p>Manual and automated testing throughout the SDLC to ensure quality at every stage of development.
+                    </p>
+                    <div class="svc-number">01</div>
+                </div>
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <h3>Mobile App Testing</h3>
+                    <p>Evaluating functionality, usability, and performance across multiple mobile platforms and
+                        devices.</p>
+                    <div class="svc-number">02</div>
+                </div>
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web App Testing</h3>
+                    <p>Cross-browser, cross-device testing to ensure your web application works for every user.</p>
+                    <div class="svc-number">03</div>
+                </div>
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Security Testing</h3>
+                    <p>Protecting your software against vulnerabilities and threats throughout the development
+                        lifecycle.</p>
+                    <div class="svc-number">04</div>
+                </div>
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-server"></i></div>
+                    <h3>Server & API Testing</h3>
+                    <p>Validating server responses, load handling, and API reliability for robust backend performance.
+                    </p>
+                    <div class="svc-number">05</div>
+                </div>
+                <div class="svc-card">
+                    <div class="svc-icon"><i class="fas fa-comments"></i></div>
+                    <h3>QA Consulting</h3>
+                    <p>Expert guidance on QA strategy, process improvement, and best practices for your team.</p>
+                    <div class="svc-number">06</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section id="portfolio" class="portfolio section-pad">
+        <div class="container">
+            <div class="section-label">My Work</div>
+            <h2 class="section-heading centered">QA <span class="gradient-text">Artifacts</span></h2>
+            <p class="section-sub centered">Real test documentation & QA deliverables</p>
+            <div class="portfolio-grid">
+                <a href="https://docs.google.com/spreadsheets/d/18AC5E8JFBcs2EGFKBAr7i7g0zdRCf6PF/edit?usp=sharing&ouid=105805684176343381867&rtpof=true&sd=true"
+                    target="_blank" class="p-card">
+                    <div class="p-card-top">
+                        <div class="p-card-icon"><i class="fas fa-bug"></i></div>
+                        <div class="p-card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <h3>Bug Report</h3>
+                    <p>Structured defect tracking with severity, priority, steps to reproduce and evidence.</p>
+                    <div class="p-card-tag">Google Sheets</div>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1uObMH-XglsL0hB4MWTfh-5SYK9OAFX47/edit?usp=sharing&ouid=105805684176343381867&rtpof=true&sd=true"
+                    target="_blank" class="p-card">
+                    <div class="p-card-top">
+                        <div class="p-card-icon"><i class="fas fa-list-check"></i></div>
+                        <div class="p-card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <h3>Test Cases</h3>
+                    <p>Comprehensive test scenarios covering positive, negative and edge case validations.</p>
+                    <div class="p-card-tag">Google Sheets</div>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1Psr7lANatJJ_k4cHoa9k3UTNgSaHrgn7/edit?usp=sharing&ouid=105805684176343381867&rtpof=true&sd=true"
+                    target="_blank" class="p-card">
+                    <div class="p-card-top">
+                        <div class="p-card-icon"><i class="fas fa-database"></i></div>
+                        <div class="p-card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <h3>Test Data</h3>
+                    <p>Well-structured input datasets designed for reliable, repeatable test execution.</p>
+                    <div class="p-card-tag">Google Sheets</div>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1NS2Kygg6uktH-qtQnLuLUi8w-XNZyRCE/edit?gid=392525537#gid=392525537"
+                    target="_blank" class="p-card">
+                    <div class="p-card-top">
+                        <div class="p-card-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="p-card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <h3>Data Dictionary</h3>
+                    <p>Standardized definitions and metadata for database fields and data structures.</p>
+                    <div class="p-card-tag">Google Sheets</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="testimonials section-pad alt-bg">
+        <div class="container">
+            <div class="section-label">Social Proof</div>
+            <h2 class="section-heading centered">What People <span class="gradient-text">Say</span></h2>
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"Rakibul Islam and I worked together on several projects. He consistently gave 100 percent effort
+                        to the team and played a significant role in ensuring that we completed assignments on time."
+                    </p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">MF</div>
+                        <div>
+                            <div class="testi-name">Mejbaur Bahar Fagun</div>
+                            <div class="testi-role">Software QA Engineer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"He is a highly skilled QA Engineer with a great eye for detail. Working with him made the
+                        development process smoother and more efficient. His feedback was always clear, timely, and
+                        valuable."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">SR</div>
+                        <div>
+                            <div class="testi-name">Saidur Rahman</div>
+                            <div class="testi-role">Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-stars">★★★★★</div>
+                    <p>"I really like how the instructor was very patient to help participants one to one if they had
+                        any issues. The webinars were well-structured and the topics were highly relevant."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">NA</div>
+                        <div>
+                            <div class="testi-name">Nirjhor Anjum</div>
+                            <div class="testi-role">Software Researcher</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOG ==================== -->
+    <section id="blog" class="blog section-pad">
+        <div class="container">
+            <div class="section-label">Knowledge Hub</div>
+            <h2 class="section-heading centered">Latest <span class="gradient-text">Articles</span></h2>
+            <p class="section-sub centered">Insights, tips &amp; deep-dives on software quality</p>
+            <div class="blog-grid">
+
+                <a href="https://www.linkedin.com/pulse/smoke-testing-ensuring-software-stability-md-rakibsanto-gxr1c/"
+                    target="_blank" class="blog-card">
+                    <div class="blog-img-wrap">
+                        <img src="img/blog-smoke.png" alt="Smoke Testing" loading="lazy" />
+                        <span class="blog-tag">QA Strategy</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Smoke Testing: Ensuring Software Stability</h3>
+                        <p>Discover how smoke testing acts as the first line of defense for detecting critical failures
+                            before full testing begins.</p>
+                        <span class="blog-cta">Read on LinkedIn <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/pulse/maximizing-efficiency-10-essential-browser-extensions-md-rakibsanto-x85xc"
+                    target="_blank" class="blog-card">
+                    <div class="blog-img-wrap">
+                        <img src="img/blog-extensions.png" alt="Browser Extensions" loading="lazy" />
+                        <span class="blog-tag">Tools</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>10 Essential Browser Extensions for Software Testing</h3>
+                        <p>A curated list of must-have extensions that boost productivity and enhance your testing
+                            workflow.</p>
+                        <span class="blog-cta">Read on LinkedIn <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/pulse/unveiling-pillars-principles-software-testing-md-rakibsanto-3mvsc/"
+                    target="_blank" class="blog-card">
+                    <div class="blog-img-wrap">
+                        <img src="img/blog-principles.png" alt="Principles of Software Testing" loading="lazy" />
+                        <span class="blog-tag">Fundamentals</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Unveiling the Pillars: Principles of Software Testing</h3>
+                        <p>A deep dive into the core principles every QA professional must understand to deliver quality
+                            software.</p>
+                        <span class="blog-cta">Read on LinkedIn <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/pulse/role-ai-machine-learning-revolutionizing-software-md-rakibsanto-titlc/"
+                    target="_blank" class="blog-card">
+                    <div class="blog-img-wrap">
+                        <img src="img/blog-ai.png" alt="AI in Software Testing" loading="lazy" />
+                        <span class="blog-tag">AI &amp; ML</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>The Role of AI &amp; ML in Revolutionizing Software Testing</h3>
+                        <p>How artificial intelligence is transforming the future of automated and intelligent testing.
+                        </p>
+                        <span class="blog-cta">Read on LinkedIn <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/pulse/understanding-significance-regression-testing-md-rakibsanto-wy72c/"
+                    target="_blank" class="blog-card">
+                    <div class="blog-img-wrap">
+                        <img src="img/blog-regression.png" alt="Regression Testing" loading="lazy" />
+                        <span class="blog-tag">Regression</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Understanding the Significance of Regression Testing</h3>
+                        <p>Why regression testing is critical to preventing old bugs from resurging as your codebase
+                            grows.</p>
+                        <span class="blog-cta">Read on LinkedIn <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact section-pad alt-bg">
+        <div class="container">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-heading centered">Let's Work <span class="gradient-text">Together</span></h2>
+            <p class="section-sub centered">Have a project in mind? I'd love to hear from you.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ci-text"><span>Location</span><strong>Boalia, Kazla, Rajshahi-6204,
+                                Bangladesh</strong></div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="ci-text"><span>Email</span><strong><a
+                                    href="mailto:rakibsanto.cse@gmail.com">rakibsanto.cse@gmail.com</a></strong></div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                        <div class="ci-text"><span>Phone</span><strong><a href="tel:+8801785094892">+88
+                                    01785-094892</a></strong></div>
+                    </div>
+                    <div class="ci-socials">
+                        <a href="https://www.facebook.com/rakibsanto" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/md-rakibsanto/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/rakibsanto" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:rakibsanto.cse@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" id="fname" placeholder=" " required />
+                            <label for="fname">Your Name</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="femail" placeholder=" " required />
+                            <label for="femail">Your Email</label>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="fsubject" placeholder=" " required />
+                        <label for="fsubject">Subject</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea id="fmessage" rows="5" placeholder=" " required></textarea>
+                        <label for="fmessage">Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submitBtn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">R<span>.</span></div>
+            <p>Developed with <i class="fas fa-heart" style="color:#f43f5e"></i> by <a
+                    href="https://www.linkedin.com/in/md-rakibsanto/" target="_blank">Rakibul Islam</a> &copy; 2026</p>
+            <a href="#home" class="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
