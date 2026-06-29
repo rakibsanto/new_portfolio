@@ -90,7 +90,7 @@ const revealObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('section, .svc-card, .p-card, .testi-card, .blog-card').forEach(el => {
+document.querySelectorAll('section, .svc-card, .p-card, .blog-card').forEach(el => {
   el.classList.add('reveal');
   revealObs.observe(el);
 });
@@ -215,7 +215,7 @@ form.addEventListener('submit', e => {
 });
 
 // ── Card subtle 3D tilt ───────────────────────────────
-document.querySelectorAll('.svc-card,.p-card,.testi-card,.blog-card,.qa-card').forEach(card => {
+document.querySelectorAll('.svc-card,.p-card,.blog-card,.qa-card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const rx = (-(e.clientY - r.top - r.height / 2) / r.height) * 6;
@@ -223,4 +223,31 @@ document.querySelectorAll('.svc-card,.p-card,.testi-card,.blog-card,.qa-card').f
     card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
   });
   card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+});
+
+// ── Testimonials Slider (Swiper) ─────────────────────────
+const testiSwiper = new Swiper('.testi-swiper', {
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  }
 });
